@@ -1,0 +1,11 @@
+---
+description: Python implementation boundaries for Altdown Tools
+globs: src/**/*.py,tests/**/*.py
+alwaysApply: false
+---
+
+Read `AGENTS.md` and the active feature plan before coding.
+Use one shared transport/parser core; do not duplicate it between `fetch` and `check`.
+All outbound requests must use the bounded injectable transport.
+No real-network unit tests, credentials, proxies or implicit environment state.
+Do not implement deferred `crawl`/`diff` features in v0.1.

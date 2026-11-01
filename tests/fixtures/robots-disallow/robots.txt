@@ -1,0 +1,2 @@
+User-agent: altdown-tools
+Disallow: /garden/page.md

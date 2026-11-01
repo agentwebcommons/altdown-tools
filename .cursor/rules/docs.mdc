@@ -1,0 +1,10 @@
+---
+description: Maintain architecture decisions and artifact boundaries
+globs: docs/**/*.md
+alwaysApply: false
+---
+
+Read `AGENTS.md`. `docs/ARCHITECTURE.md` describes actual current code only.
+ADRs use date-slug names and cannot change after human acceptance.
+Tasks need objective `verify` commands; check a box only when its command passes.
+Do not self-accept Proposed ADRs or invent missing specification requirements.

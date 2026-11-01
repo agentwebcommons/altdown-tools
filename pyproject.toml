@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "altdown-tools"
+version = "0.0.0"
+description = "Reference reader and validator for the Altdown draft specification (planning scaffold)"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "Apache-2.0"
+authors = [{ name = "Altdown Tools contributors" }]
+keywords = ["altdown", "agents", "markdown", "validation"]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "beautifulsoup4>=4.12,<5",
+    "httpx>=0.27,<1",
+    "typer>=0.12,<1",
+]
+
+[project.urls]
+Homepage = "https://altdown.org/"
+Repository = "https://github.com/agentwebcommons/altdown-tools"
+Specification = "https://altdown.org/1.0/"
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "respx>=0.21,<1", "ruff>=0.9,<1"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/altdown_tools"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

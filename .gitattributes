@@ -1,0 +1,7 @@
+* text=auto
+*.md text eol=lf
+*.py text eol=lf
+*.toml text eol=lf
+*.yml text eol=lf
+# A06 fixture: checkout must keep CRLF so the line-ending case survives clone.
+tests/fixtures/crlf/page.md text eol=crlf

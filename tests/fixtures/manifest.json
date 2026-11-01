@@ -1,0 +1,66 @@
+{
+  "description": "Synthetic fixture variants; not live sites or direct copies of the spec.",
+  "base_url": "https://example.org/garden/",
+  "cases": [
+    {
+      "id": "valid",
+      "expected_fetch": "markdown",
+      "expected_check": "pass"
+    },
+    {
+      "id": "missing-alternate",
+      "expected_fetch": "html-fallback",
+      "expected_check": "fail"
+    },
+    {
+      "id": "canonical-mismatch",
+      "expected_fetch": "html-fallback",
+      "expected_check": "fail"
+    },
+    {
+      "id": "cross-origin",
+      "expected_fetch": "html-fallback",
+      "expected_check": "fail"
+    },
+    {
+      "id": "malformed-frontmatter",
+      "expected_fetch": "html-fallback",
+      "expected_check": "fail"
+    },
+    {
+      "id": "unfaithful",
+      "expected_fetch": "markdown",
+      "expected_check": "fail-fidelity"
+    },
+    {
+      "id": "unknown-field",
+      "expected_fetch": "markdown",
+      "expected_check": "fail"
+    },
+    {
+      "id": "extension-field",
+      "expected_fetch": "markdown",
+      "expected_check": "pass"
+    },
+    {
+      "id": "duplicate-field",
+      "expected_fetch": "markdown-first-wins",
+      "expected_check": "fail"
+    },
+    {
+      "id": "crlf",
+      "expected_fetch": "markdown",
+      "expected_check": "warn"
+    },
+    {
+      "id": "hidden-text",
+      "expected_fetch": "markdown",
+      "expected_check": "fail-fidelity"
+    },
+    {
+      "id": "robots-disallow",
+      "expected_fetch": "html-fallback",
+      "expected_check": "fail-robots"
+    }
+  ]
+}

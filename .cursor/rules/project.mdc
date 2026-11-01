@@ -1,0 +1,8 @@
+---
+description: Mandatory repository entrypoint and human approval gate
+alwaysApply: true
+---
+
+Read `AGENTS.md` before taking action.
+The v0.1 ADR starts Proposed. Stop before implementation until a human has
+accepted it. Execute one bounded phase at a time and stop after verification.
